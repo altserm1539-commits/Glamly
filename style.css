@@ -1,0 +1,143 @@
+:root{
+    --black:#000000;
+    --white:#ffffff;
+    --gold:#ffd700;
+    --gold-dark:#e6c200;
+    --gold-contrast:#b8860b;
+    --muted:#6b6b6b;
+    --bg:#fbfbfb;
+    --card:#ffffff;
+}
+
+/* Reset & typography */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    font-family: Inter, Roboto, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+    margin:0; padding:0; color:var(--black); background:var(--bg); -webkit-font-smoothing:antialiased;
+    line-height:1.45; font-size:16px;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:0.8rem}
+
+/* NAV */
+.nav{background:var(--white);border-bottom:1px solid #eee}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0}
+.logo{font-family:Poppins, sans-serif;font-weight:700;color:var(--black);font-size:1.15rem}
+.nav-actions{display:flex;gap:0.5rem;align-items:center}
+.link{color:var(--muted);text-decoration:none;font-weight:600}
+.btn{display:inline-block;background:var(--gold);color:var(--black);padding:.6rem 1rem;border-radius:6px;text-decoration:none;font-weight:700}
+.btn.large{padding:.9rem 1.4rem;font-size:1.05rem}
+.btn-outline{background:transparent;border:1px solid #ddd;color:var(--black);padding:.55rem 0.9rem;border-radius:6px}
+
+/* HERO */
+.hero{padding:1rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:1rem;align-items:center}
+.hero-content h1{font-family:Poppins, sans-serif;font-size:1.9rem;margin:0 0 .4rem;color:var(--black);line-height:1.08}
+.lead{color:var(--muted);margin:0 0 .9rem}
+.hero-ctas{display:flex;gap:.75rem;margin-bottom:.5rem}
+.no-card{color:var(--muted);font-size:.9rem;margin-top:.4rem}
+.trust{display:flex;gap:1rem;list-style:none;padding:0;margin-top:1rem;color:var(--muted)}
+.trust li strong{color:var(--black);margin-right:.25rem}
+.panel-mockup{background:linear-gradient(135deg,#222 0%,#444 100%);height:300px;border-radius:10px;color:#fff;display:flex;align-items:center;justify-content:center}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:0.9rem;margin-top:0.9rem}
+.card{background:var(--card);padding:.9rem;border-radius:8px;box-shadow:0 6px 12px rgba(0,0,0,0.05)}
+.card .icon{font-size:1.6rem}
+.card h3{margin:.5rem 0}
+.card p{color:var(--muted);margin:0}
+
+/* Ideal for chips */
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
+.chips span{background:#fff;padding:.45rem .7rem;border-radius:999px;border:1px solid #eee;color:var(--muted);font-weight:600}
+
+/* Features grid */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.7rem;margin-top:0.9rem}
+.feature{background:#fff;padding:.75rem;border-radius:8px;border:1px solid #f0f0f0;color:var(--black);font-weight:600}
+
+/* How it works */
+.steps{display:flex;gap:0.9rem;margin-top:0.9rem}
+.step{background:#fff;padding:.9rem;border-radius:8px;flex:1;text-align:center;border:1px solid #f0f0f0}
+.step .num{background:var(--gold);width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:.45rem}
+
+/* Social / testimonials */
+.stats{display:flex;gap:1rem;justify-content:space-between;margin-top:0.5rem}
+.stats div{background:#fff;padding:.8rem;border-radius:8px;flex:1;text-align:center;border:1px solid #f0f0f0}
+.testimonial{background:#fff;padding:.95rem;border-left:4px solid var(--gold);border-radius:6px;margin-top:0.9rem}
+
+/* CTA */
+.cta{background:var(--black);color:var(--white);padding:1.4rem;border-radius:10px;margin:1.2rem 0}
+.cta .btn{background:var(--gold);color:var(--black)}
+.cta .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.15);color:#fff}
+
+/* Footer */
+.site-footer{background:var(--black);color:var(--gold);padding:1rem 0}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.9rem}
+.site-footer a{color:var(--gold);text-decoration:none}
+.copyright{color:var(--gold);text-align:center;margin-top:.8rem;font-size:.9rem}
+
+/* Responsive */
+@media (max-width:1000px){
+    .hero-grid{grid-template-columns:1fr 320px}
+    .features-grid{grid-template-columns:repeat(2,1fr)}
+    .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+    .hero-grid{grid-template-columns:1fr;gap:.8rem}
+    .panel-mockup{height:200px}
+    .cards{grid-template-columns:1fr}
+    .features-grid{grid-template-columns:1fr}
+    .steps{flex-direction:column}
+    .footer-grid{grid-template-columns:1fr}
+    .nav-actions{gap:.4rem}
+    .hero-content h1{font-size:1.45rem}
+    .lead{font-size:0.98rem}
+    .logo{font-size:1rem}
+    .btn.large{font-size:0.98rem;padding:.7rem 1.1rem}
+}
+
+/* Accessibility focus */
+.btn:focus,.link:focus,input:focus,textarea:focus{outline:3px solid rgba(255,215,0,0.18);outline-offset:2px}
+
+/* Demo form */
+.demo{margin-top:1.25rem}
+.demo-form{background:var(--card);padding:1rem;border-radius:8px;border:1px solid #eee;box-shadow:0 8px 20px rgba(10,10,10,0.03)}
+.demo-form .form-row{display:flex;gap:.75rem}
+.demo-form label{flex:1;display:flex;flex-direction:column;font-weight:600;color:var(--muted);font-size:.9rem}
+.demo-form input,.demo-form textarea{margin-top:.45rem;padding:.6rem;border-radius:6px;border:1px solid #e6e6e6;font-size:1rem}
+.form-actions{display:flex;gap:.75rem;align-items:center;margin-top:.8rem}
+.form-note{color:var(--muted);font-size:.9rem;margin-top:.5rem}
+.form-message{margin-top:.75rem;font-weight:700}
+
+/* Payment form (similar to demo but with plan selector) */
+.payment-form{background:var(--card);padding:1rem;border-radius:8px;border:1px solid #eee;box-shadow:0 8px 20px rgba(10,10,10,0.03);max-width:520px;margin:0 auto}
+.payment-form .form-row{display:flex;gap:.75rem;flex-wrap:wrap}
+.payment-form label{flex:1;display:flex;flex-direction:column;font-weight:600;color:var(--muted);font-size:.9rem}
+.payment-form input{margin-top:.45rem;padding:.6rem;border-radius:6px;border:1px solid #e6e6e6;font-size:1rem}
+
+.plan-cards{display:grid;grid-template-columns:1fr;gap:0.9rem;margin-bottom:1rem}
+.plan-card{border:1px solid #ddd;border-radius:8px;padding:.9rem;cursor:pointer;position:relative}
+.plan-card input[type=radio]{position:absolute;top:12px;right:12px}
+.plan-card h3{margin:.4rem 0;color:var(--black);font-size:1.05rem}
+.plan-card ul{margin:0.5rem 0 0 1rem;color:var(--muted);font-size:.9rem;list-style:none;line-height:1.3}
+.plan-card .price-info{margin-top:.6rem;font-weight:600;color:var(--black);font-size:.95rem}
+.plan-card:hover{background:#fafafa}
+.plan-card input:checked + .plan-details{outline:2px solid var(--gold)}
+
+.billing-options{margin-top:0.8rem;margin-bottom:1rem}
+.billing-options label{margin-right:1rem;font-weight:600;color:var(--muted)}
+
+/* Reduce large whitespace on small screens */
+header.hero{padding-top:1rem;padding-bottom:1rem}
+.container{padding-left:0.8rem;padding-right:0.8rem}
+
+/* small tweaks */
+.card p{font-size:.95rem}
+.lead{font-size:1.02rem}
+
+/* Validation & feedback */
+.input-error{border-color:#d32f2f !important;box-shadow:0 0 0 3px rgba(211,47,47,0.06)}
+.field-error-msg{color:#d32f2f;font-size:.88rem;margin-top:.35rem}
+.form-success{background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:var(--black);padding:.9rem;border-radius:8px;text-align:center;font-weight:700}
+.btn[disabled]{opacity:.6;cursor:not-allowed}

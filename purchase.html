@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar Glamly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <div class="logo">Glamly</div>
+            <div class="nav-actions">
+                <a href="index.html" class="link secondary">Inicio</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Prueba Glamly gratis 14 días</h1>
+        <p>Para iniciar tu periodo de prueba necesitas ingresar datos de tarjeta. Al finalizar los 14 días serás cobrado automáticamente según el plan que elijas (mensual o anual).</p>
+
+        <form id="paymentForm" class="payment-form">
+            <!-- plan selection -->
+            <div class="plan-cards">
+                <label class="plan-card">
+                    <input type="radio" name="plan" value="basico">
+                    <div class="plan-details">
+                        <h3>Plan Básico – Para salones pequeños</h3>
+                        <ul>
+                            <li>✔ Agenda y citas</li>
+                            <li>✔ Gestión de clientes</li>
+                            <li>✔ Recordatorios SMS/Email</li>
+                            <li>✔ Reportes básicos</li>
+                        </ul>
+                        <p class="price-info">
+                            Mensual: $199 MXN / mes<br>
+                            Anual: $1,990 MXN / año (2 meses gratis)
+                        </p>
+                    </div>
+                </label>
+                <label class="plan-card">
+                    <input type="radio" name="plan" value="profesional">
+                    <div class="plan-details">
+                        <h3>Plan Profesional – Para salones medianos</h3>
+                        <ul>
+                            <li>✔ Todo del Básico</li>
+                            <li>✔ Punto de venta</li>
+                            <li>✔ Inventario básico</li>
+                            <li>✔ Reportes avanzados</li>
+                        </ul>
+                        <p class="price-info">
+                            Mensual: $399 MXN / mes<br>
+                            Anual: $3,990 MXN / año (2 meses gratis)
+                        </p>
+                    </div>
+                </label>
+                <label class="plan-card">
+                    <input type="radio" name="plan" value="premium">
+                    <div class="plan-details">
+                        <h3>Plan Premium – Para crecimiento y negocios grandes</h3>
+                        <ul>
+                            <li>✔ Todo del Profesional</li>
+                            <li>✔ Nómina y comisiones</li>
+                            <li>✔ Integraciones (WhatsApp, etc.)</li>
+                            <li>✔ Soporte prioritario</li>
+                        </ul>
+                        <p class="price-info">
+                            Mensual: $699 MXN / mes<br>
+                            Anual: $6,990 MXN / año (2 meses gratis)
+                        </p>
+                    </div>
+                </label>
+            </div>
+            <!-- billing cycle -->
+            <div class="billing-options">
+                <label><input type="radio" name="cycle" value="monthly"> Mensual</label>
+                <label><input type="radio" name="cycle" value="annual"> Anual</label>
+            </div>
+            <div class="form-row">
+                <label>Número de tarjeta<input type="text" name="cardNumber" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"></label>
+                <label>Fecha de expiración<input type="text" name="expiry" placeholder="MM/AA"></label>
+                <label>CVV<input type="text" name="cvv" maxlength="4" placeholder="123"></label>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn">Iniciar prueba 14 días</button>
+            </div>
+            <div id="paymentMessage" class="form-message" aria-live="polite"></div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
